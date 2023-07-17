@@ -11,26 +11,6 @@
 	<meta property="og:title" content={data.meta.title} />
 </svelte:head>
 
-<article>
-    <!-- Title -->
-	<hgroup>
-		<h1>{data.meta.title}</h1>
-		<p>Published at {formatDate(data.meta.date)}</p>
-	</hgroup>
-
-    <!-- Tags -->
-	<div class="tags">
-		{#each data.meta.categories as category}
-			<span class="surface-4">&num;{category}</span>
-		{/each}
-	</div>
-
-    <!-- Post -->
-	<div class="prose">
-		<svelte:component this={data.content} />
-	</div>
-</article>
-
 <style>
 	article {
 		max-inline-size: var(--size-content-3);
@@ -57,3 +37,23 @@
 		border-radius: var(--radius-round);
 	}
 </style>
+
+<article>
+    <!-- Title -->
+	<hgroup>
+		<h1>{data.meta.title}</h1>
+		<p>Published at {formatDate(data.meta.date)}</p>
+	</hgroup>
+
+    <!-- Tags -->
+	<div class="tags">
+		{#each data.meta.categories as category}
+			<span class="surface-4">&num;{category}</span>
+		{/each}
+	</div>
+
+    <!-- Post -->
+	<div class="prose">
+		<svelte:component this={data.content} />
+	</div>
+</article>
