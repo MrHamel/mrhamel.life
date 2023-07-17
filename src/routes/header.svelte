@@ -1,30 +1,8 @@
 <script lang="ts">
     import Toggle from './toggle.svelte'
+	import Avatar from './avatar.svelte';
 	import * as config from '$lib/config'
 </script>
-
-<nav>
-    <!-- Title -->
-	<a href="/" class="title">
-		<b>{config.title}</b>
-	</a>
-
-    <!-- Navigation -->
-	<ul class="links">
-		<li>
-			<a href="/about">About Me</a>
-		</li>
-		<li>
-			<a href="/contact">Contact Me</a>
-		</li>
-		<li>
-			<a href="/rss.xml" target="_blank">RSS</a>
-		</li>
-	</ul>
-
-    <!-- Theme -->
-    <Toggle />
-</nav>
 
 <style>
 	nav {
@@ -53,3 +31,27 @@
 		}
 	}
 </style>
+
+<nav>
+    <!-- Title -->
+	<a href="/" class="title">
+		<!-- <Avatar width=32 rounded={true} userFullName="Ryan Hamel" src="https://ryanhamel.com/img/profile.webp" /> -->
+		{config.title}
+	</a>
+
+    <!-- Navigation -->
+	<ul class="links">
+		<li>
+			<a href="/about">About Me</a>
+		</li>
+		<li>
+			<a href="https://ryanhamel.com/links" target="_blank">Contact Me</a>
+		</li>
+		<li>
+			<a href="/rss.xml" target="_blank">RSS</a>
+		</li>
+	</ul>
+
+    <!-- Theme -->
+    <Toggle />
+</nav>

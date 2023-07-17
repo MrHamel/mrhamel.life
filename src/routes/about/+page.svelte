@@ -5,18 +5,6 @@
 	<meta property="og:title" content="About Me" />
 </svelte:head>
 
-<article>
-    <!-- Title -->
-	<hgroup>
-		<h1>About Me</h1>
-	</hgroup>
-
-    <!-- Post -->
-	<div class="prose">
-		This is only a test.
-	</div>
-</article>
-
 <style>
 	article {
 		max-inline-size: var(--size-content-3);
@@ -43,3 +31,15 @@
 		border-radius: var(--radius-round);
 	}
 </style>
+
+<article>
+    <!-- Title -->
+	<hgroup>
+		<h1>About Me</h1>
+	</hgroup>
+
+    <!-- Post -->
+	<div class="prose">
+		Content will be added here soon.
+	</div>
+</article>

@@ -12,20 +12,6 @@
     export let data
 </script>
 
-<div class="layout">
-    <!-- Header -->
-	<Header />
-
-	<main>
-		<PageTransition url={data.url}>
-			<slot />
-		</PageTransition>
-	</main>
-
-    <!-- Footer -->
-	<Footer />
-</div>
-
 <style>
 	.layout {
 		height: 100%;
@@ -46,3 +32,17 @@
 		}
 	}
 </style>
+
+<div class="layout">
+    <!-- Header -->
+	<Header />
+
+	<main>
+		<PageTransition url={data.url}>
+			<slot />
+		</PageTransition>
+	</main>
+
+    <!-- Footer -->
+	<Footer />
+</div>
