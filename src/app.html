@@ -4,14 +4,23 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="alternate" type="application/atom+xml" href="/rss.xml" />
-		<link rel="icon" href="https://fav.farm/🔥" />
+		<link rel="icon" href="https://ryanhamel.com/links/mh-logo.png" />
+
+		<meta name="author" content="Ryan Hamel" />
+
+        <meta name="generator" content="Mr. Hamel's Brain" />
+
+        <meta name="theme-color" content="#000000" />
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="#000000">
+
+		<meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@mrhameljr" />
+        <meta name="twitter:creator" content="@mrhameljr" />
+        <meta name="twitter:image" content="https://ryanhamel.com/img/profile.webp" />
 
 		<script type="module">
-			const theme = localStorage.getItem('color-scheme')
-
-			theme
-				? document.documentElement.setAttribute('color-scheme', theme)
-				: localStorage.setItem('color-scheme', 'dark')
+			const theme = "dark"
 		</script>
 
 		%sveltekit.head%

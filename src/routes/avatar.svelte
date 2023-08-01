@@ -90,7 +90,7 @@ https://github.com/IQAndreas/markdown-licenses/blob/master/mit.md
     });
 </script>
 
-<style>
+<style lang="postcss">
     .round {
         border-radius: 50%;
     }

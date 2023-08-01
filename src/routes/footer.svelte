@@ -2,18 +2,7 @@
 	import * as config from '$lib/config'
 </script>
 
-<style>
-	footer {
-		padding-block: var(--size-7);
-		border-top: 1px solid var(--border);
-	}
-
-	p {
-		color: var(--text-2);
-	}
-</style>
-
 <!-- Footer -->
 <footer>
-	<p>{config.title} &copy {new Date().getFullYear()}</p>
+	<p class="py-3 text-center text-gray-100">{config.title} &copy {new Date().getFullYear()}</p>
 </footer>

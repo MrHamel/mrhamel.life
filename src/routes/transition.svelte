@@ -4,7 +4,7 @@
 	export let url: string
 </script>
 
-<style>
+<style lang="postcss">
 	.transition {
 		height: 100%;
 	}

@@ -4,7 +4,7 @@
 	import { theme, toggleTheme } from '$lib/theme'
 </script>
 
-<style>
+<style lang="postcss">
 	button {
 		padding: 0;
 		font-weight: inherit;

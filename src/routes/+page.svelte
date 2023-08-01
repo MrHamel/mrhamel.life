@@ -1,52 +1,15 @@
 <script lang="ts">
-	import { formatDate } from '$lib/utils'
 	import * as config from '$lib/config'
-
-	export let data
+	import { generateSEOHead } from '$lib/utils';
 </script>
 
 <svelte:head>
-	<title>{config.title}</title>
+	{@html generateSEOHead("/")}
 </svelte:head>
 
-<style>
-	.posts {
-		display: grid;
-		gap: 2rem;
-	}
-
-	.post {
-		max-inline-size: var(--size-content-3);
-	}
-
-	.post:not(:last-child) {
-		border-bottom: 1px solid var(--border);
-		padding-bottom: var(--size-7);
-	}
-
-	.title {
-		font-size: var(--font-size-fluid-3);
-		text-transform: capitalize;
-	}
-
-	.date {
-		color: var(--text-2);
-	}
-
-	.description {
-		margin-top: var(--size-3);
-	}
-</style>
-
-<!-- Posts -->
-<section>
-	<ul class="posts">
-		{#each data.posts as post}
-			<li class="post">
-				<a href={post.slug} class="title">{post.title}</a>
-				<p class="date">{formatDate(post.date)}</p>
-				<p class="description">{post.description}</p>
-			</li>
-		{/each}
-	</ul>
-</section>
+<div class="grid h-screen place-content-center items-center justify-center gap-3 bg-[url('/background-2.jpg.webp')] bg-center bg-cover">
+	<h1 class="text-5xl mx-auto text-gray-100">Mr. Hamel's Life</h1>
+	<h3 class="text-2xl mx-auto text-gray-100">{config.description}</h3>
+	<span class="gap-5"></span>
+	<a href="/blog" class="mx-auto rounded-xl bg-gray-700 px-20 py-4 text-white">Go to Blog</a>
+</div>

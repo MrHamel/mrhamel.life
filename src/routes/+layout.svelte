@@ -1,48 +1,23 @@
 <script lang="ts">
-	import Footer from './footer.svelte'
-	import Header from './header.svelte'
-    import PageTransition from './transition.svelte'
+	import Footer from './footer.svelte';
+	import Header from './header.svelte';
+	import PageTransition from './transition.svelte';
 
-	import 'open-props/style'
-	import 'open-props/normalize'
-	import 'open-props/buttons'
+	import '../app.postcss';
 
-	import '../app.css'
-
-    export let data
+	export let data;
 </script>
 
-<style>
-	.layout {
-		height: 100%;
-		max-inline-size: 1440px;
-		display: grid;
-		grid-template-rows: auto 1fr auto;
-		margin-inline: auto;
-		padding-inline: var(--size-7);
-	}
-
-	main {
-		padding-block: var(--size-9);
-	}
-
-	@media (min-width: 1440px) {
-		.layout {
-			padding-inline: 0;
-		}
-	}
-</style>
-
-<div class="layout">
-    <!-- Header -->
+<div class="flex flex-col min-h-screen">
+	<!-- Header -->
 	<Header />
 
-	<main>
+	<main class="flex-grow">
 		<PageTransition url={data.url}>
 			<slot />
 		</PageTransition>
 	</main>
 
-    <!-- Footer -->
+	<!-- Footer -->
 	<Footer />
 </div>
