@@ -2,7 +2,6 @@
     import { afterNavigate } from '$app/navigation';
 	import { base } from '$app/paths'
     import { goto } from '$app/navigation';
-    import { page } from '$app/stores';
 
     let previousPage : string = base ;
 
