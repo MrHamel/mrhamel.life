@@ -11,7 +11,7 @@
 </style>
 
 {#key url}
-	<div class="transition" in:fade>
+	<div class="transition transform duration-75 motion-reduce:transition-none motion-reduce:hover:transform-none" in:fade>
 		<slot />
 	</div>
 {/key}
